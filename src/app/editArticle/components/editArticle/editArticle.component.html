@@ -1,0 +1,8 @@
+<ac-loading *ngIf="isLoading$ | async"></ac-loading>
+<ac-article-form
+  *ngIf="initialValues$ | async"
+  [initialValues]="initialValues$ | async"
+  [isSubmiting]="isSubmiting$ | async"
+  [errors]="backendErrors$ | async"
+  (articleSubmit)="onSubmit($event)"
+></ac-article-form>
